@@ -1,0 +1,16 @@
+.sort {
+  color: #19637C;
+  margin-bottom: 1rem;
+}
+.sort__text {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+.sort__dropdown {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #19637C;
+  letter-spacing: 1px;
+}
