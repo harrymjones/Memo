@@ -7,6 +7,7 @@
   letter-spacing: 1px;
 }
 .sort__dropdown {
+  margin-left: 0.5rem;
   outline: none;
   border: none;
   background-color: transparent;
