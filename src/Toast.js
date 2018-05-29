@@ -6,8 +6,6 @@ class Toast extends Component {
   constructor (props) {
     super(props);
 
-    this.toast = React.createRef();
-
     this.state = {
       show: false
     };
@@ -19,20 +17,25 @@ class Toast extends Component {
       this.setState({
         show: true
       });
-    }, 250);
 
-    setTimeout(() => {
-      this.setState({
-        show: false
-      });
-    }, this.props.duration - 500);
+      if (this.props.duration) {
+        // Remove 500ms for toasts over 1 second long to animate out
+        const d = this.props.duration;
+        const animateOutTime = d > 1000 ? d - 500 : d;
+
+        setTimeout(() => {
+          this.setState({
+            show: false
+          });
+        }, animateOutTime);
+      }
+    }, 250);
   }
 
   render () {
     return (
       <div
-        ref={ this.toast }
-        className={ "toast toast--" + this.props.type + (this.state.show ? ' toast--show' : '') }>
+        className={ "toast " + (this.props.type ? "toast--" + this.props.type : "") + (this.state.show ? ' toast--show' : '') }>
         { this.props.text }
       </div>
     );

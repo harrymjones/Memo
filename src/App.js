@@ -93,8 +93,8 @@ class App extends Component {
     //     toastsCopy.push({
     //       "id": this.uuidv4(),
     //       "type": "error",
-    //       "text": "Error: couldn't remove memo. Please try again later",
-    //       "duration": 0
+    //       "text": "Error: couldn't create memo. Please try again later",
+    //       "duration": 5000
     //     });
     //
     //     this.setState(prevState => ({
@@ -167,7 +167,7 @@ class App extends Component {
       //       "id": this.uuidv4(),
       //       "type": "error",
       //       "text": "Error: couldn't remove memo. Please try again later",
-      //       "duration": 0
+      //       "duration": 5000
       //     });
       //
       //     this.setState(prevState => ({
@@ -347,8 +347,7 @@ class App extends Component {
       //     toastsCopy.push({
       //       "id": this.uuidv4(),
       //       "type": "error",
-      //       "text": "Error: couldn't load memos. Please try again later",
-      //       "duration": 0
+      //       "text": "Error: couldn't load memos. Please try again later"
       //     });
       //
       //     this.setState(prevState => ({
